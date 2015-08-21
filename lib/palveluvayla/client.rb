@@ -18,25 +18,31 @@ module Palveluvayla
       user_id = conf[:user_id]
       id = conf[:id]
 
-      wsdl_url = "#{security_server_url}/wsdl?instance=#{service_instance}&memberClass=#{service_member_class}&memberCode=#{service_member_code}&subsystemCode=#{service_sub_system_code}&serviceCode=#{service_code}&version=#{service_version}"
+      wsdl_url = "#{conf[:security_server_url]}/wsdl"\
+                 "?instance=#{conf[:service_instance]}"\
+                 "&memberClass=#{conf[:service_member_class]}"\
+                 "&memberCode=#{conf[:service_member_code]}"\
+                 "&subsystemCode=#{conf[:service_sub_system_code]}"\
+                 "&serviceCode=#{conf[:service_code]}"\
+                 "&version=#{conf[:service_version]}"
 
       xroad_header = {
         'xrd:service': {
-          'id:xRoadInstance': service_instance,
-          'id:memberClass': service_member_class,
-          'id:memberCode': service_member_code,
-          'id:subsystemCode': service_sub_system_code,
-          'id:serviceCode': service_code,
-          'id:serviceVersion':  service_version
+          'id:xRoadInstance': conf[:service_instance],
+          'id:memberClass': conf[:service_member_class],
+          'id:memberCode': conf[:service_member_code],
+          'id:subsystemCode': conf[:service_sub_system_code],
+          'id:serviceCode': conf[:service_code],
+          'id:serviceVersion':  conf[:service_version]
         },
         'xrd:client': {
-          'id:xRoadInstance': client_instance,
-          'id:memberClass': client_member_class,
-          'id:memberCode': client_member_code,
-          'id:subsystemCode': client_sub_system_code
+          'id:xRoadInstance': conf[:client_instance],
+          'id:memberClass': conf[:client_member_class],
+          'id:memberCode': conf[:client_member_code],
+          'id:subsystemCode': conf[:client_sub_system_code]
         },
-        'xrd:userId': user_id,
-        'xrd:id': id,
+        'xrd:userId': conf[:user_id],
+        'xrd:id': conf[:id],
         'xrd:protocolVersion': '4.0',
         attributes!: {
           'xrd:service': {
