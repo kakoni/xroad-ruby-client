@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+SOAPAction:
+Content-Type: text/xml;charset=UTF-8
+Content-Length: 1244
+Server: Jetty(8.y.z-SNAPSHOT)
+
+<?xml version="1.0" encoding="utf-8" ?><SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:id="http://x-road.eu/xsd/identifiers" xmlns:xrd="http://x-road.eu/xsd/xroad.xsd"><SOAP-ENV:Header><xrd:client id:objectType="SUBSYSTEM"><id:xRoadInstance>FI-DEV</id:xRoadInstance><id:memberClass>COM</id:memberClass><id:memberCode>2519909-5</id:memberCode><id:subsystemCode>TestSystem</id:subsystemCode></xrd:client><xrd:service id:objectType="SERVICE"><id:xRoadInstance>FI-DEV</id:xRoadInstance><id:memberClass>GOV</id:memberClass><id:memberCode>0245437-2</id:memberCode><id:subsystemCode>TestService</id:subsystemCode><id:serviceCode>getRandom</id:serviceCode><id:serviceVersion>v1</id:serviceVersion></xrd:service><xrd:userId>test</xrd:userId><xrd:id>ID11234</xrd:id><xrd:protocolVersion>4.0</xrd:protocolVersion><xrd:requestHash algorithmId="http://www.w3.org/2001/04/xmlenc#sha512">BctKG2lqIDAUHBeBKwclPzCq20HiUlihZCnHnmGRsZGn7DQzzXMrFLBahOMotUECy9Ah4gbP7DxeG2aRBiDOwQ==</xrd:requestHash></SOAP-ENV:Header><SOAP-ENV:Body><ts1:getRandomResponse xmlns:ts1="http://vrk-test.x-road.fi/producer"><ts1:request/><ts1:response><ts1:data>15</ts1:data></ts1:response></ts1:getRandomResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
