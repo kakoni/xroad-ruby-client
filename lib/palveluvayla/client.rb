@@ -7,6 +7,8 @@ module Palveluvayla
     def initialize(conf = {})
       uuid = UUID.new
 
+      id = conf[:id] || uuid.generate
+
       wsdl_url = "#{conf[:security_server_url]}/wsdl"\
                  "?instance=#{conf[:service_instance]}"\
                  "&memberClass=#{conf[:service_member_class]}"\
@@ -31,7 +33,7 @@ module Palveluvayla
           'id:subsystemCode': conf[:client_sub_system_code]
         },
         'xrd:userId': conf[:user_id],
-        'xrd:id': uuid.generate,
+        'xrd:id': id,
         'xrd:protocolVersion': '4.0',
         attributes!: {
           'xrd:service': {

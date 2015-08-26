@@ -15,8 +15,7 @@ class ClientTest < Minitest::Test
       client_member_class: 'COM',
       client_member_code: '123456-7',
       client_sub_system_code: 'TestSystem',
-      user_id: 'test',
-      id: 'ID11234'
+      user_id: 'test'
     }
 
     wsdl_url = "#{configuration[:security_server_url]}/wsdl"\
