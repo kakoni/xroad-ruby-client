@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Karri Niemelä"]
   spec.email         = ["kakoni@gmail.com"]
 
-  spec.summary       = %q{Palveluväylä simple ruby client.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{X-Road ruby client.}
+  spec.description   = %q{Simple palveluväylä/x-road API client for ruby.}
+  spec.homepage      = "https://github.com/kakoni/xroad-ruby-client"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
@@ -29,4 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "byebug"
   spec.add_development_dependency "webmock"
   spec.add_dependency "savon", "~> 2.11.1"
+  spec.add_dependency "uuid", "~> 2.3.7"
+
 end

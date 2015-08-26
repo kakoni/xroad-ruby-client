@@ -34,7 +34,6 @@ Initialize client with following parameters:
 * client_member_code
 * client_sub_system_code
 * user_id
-* id
 
 ```ruby
 configuration = {

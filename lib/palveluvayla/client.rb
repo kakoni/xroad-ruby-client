@@ -1,9 +1,12 @@
 require 'savon'
+require 'uuid'
 
 module Palveluvayla
 
   class Client
     def initialize(conf = {})
+      uuid = UUID.new
+
       wsdl_url = "#{conf[:security_server_url]}/wsdl"\
                  "?instance=#{conf[:service_instance]}"\
                  "&memberClass=#{conf[:service_member_class]}"\
@@ -28,7 +31,7 @@ module Palveluvayla
           'id:subsystemCode': conf[:client_sub_system_code]
         },
         'xrd:userId': conf[:user_id],
-        'xrd:id': conf[:id],
+        'xrd:id': uuid.generate,
         'xrd:protocolVersion': '4.0',
         attributes!: {
           'xrd:service': {
