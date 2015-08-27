@@ -1,4 +1,4 @@
-# Palveluvayla
+# Palveluväylä/X-Road Ruby Client
 
 This is simple palveluväylä/x-road API client for ruby.
 It uses excellent Savon SOAP client underneath, https://github.com/savonrb/savon
